@@ -17,48 +17,31 @@ can also store their current calendar in a file and restore calendars from files
 content of the calendar, or merge other calendars into their current calendar. Lastly, users also have the option
 to create a todo list and switch back and forth between their todo list and the calendar.  
 
-Design Choices:
-* Majority of design choices explained in the questions below * 
-
-1. When a DisplayableMonth is the top level object being displayed, each day has a "*" next to its number representing the
-   number of events that day has. I made the decision to stop concatenating stars to a day once 10 events have been added
-   to a single digit day number and once 9 events have been added to a double digit day number, even if the user continues to 
-   add events to that day. The events will still be added, but no more stars will be shown. I made this design choice because 
-   the width between day numbers in a month when the DisplayableMonth is the current display is 11 spaces, so adding more than 
-   10 for single digit numbers and 9 stars for double digit numbers would ruin the display. 
-
-2. The starter code handles invalid inputs by ignoring them and continuing the program. I thought about handling invalid
-   inputs when the user was either adding or editting a calendar event or adding a task to the todo list in the same way,
-   but thought that instead it would be better to print out a message indiciating the error in their input and reprompt
-   them to create the event or task. I thought this these error messages could prevent the user from making the same
-   mistake in the future and understand why their input was not valid. 
-
-
 Test Cases: 
 
-1. I tried to add an event that was in a year not stored in the calendar (i.e. 2018 or 2021) and my program printed
-   a statement indicating my error and asked me to try again. 
+1. Adding an event in a year not stored in calendar (i.e. 2018 or 2021) - program prints
+   statement indicating error and reprompts user. 
    
-2. I tried to add an event that was on an invalid day (i.e. 40) and my program printed a statement indicating my error and 
-   asked me to try again. 
+2. Adding an event that on an invalid day (i.e. 40) - program prints statement indicating error and 
+   reprompts user. 
    
-3. I tried to add an event that was in an invalid month (i.e. 15) and my program printeda statement indicating my error and 
-   asked me to try again. 
+3. Adding an event in an invalid month (i.e. 15) - program prints statement indicating error and 
+   reprompts user. 
    
-4. I tried to add an event that was in at an invalid time (i.e. hour greater than 24 and minute greater than 60) and my 
-   program printed a statement indicating my error and asked me to try again. 
+4. Adding an event at an invalid time (i.e. hour greater than 24 and minute greater than 60) - 
+   program prints statement indicating error and reprompts user.
    
-5. I tried to entering words (instead of numbers) when asked to input a tasks year, month, date, hour, or minute and my program
-   printed a statement indicating my error and asked me to try again. 
+5. Entering words (instead of numbers) for a task's year, month, date, hour, or minute - program
+   prints statement indicating error and reprompts user. 
    
-7. I tried to add a task that was on an invalid day (i.e. 40) and my program printed a statement indicating my error and 
-   asked me to try again. 
+7. Adding task on an invalid day (i.e. 40) - program prints statement indicating my error and 
+   reprompts user. 
    
-8. I tried to add a task that was in an invalid month (i.e. 15) and my program printeda statement indicating my error and 
-   asked me to try again. 
+8. Add task in an invalid month (i.e. 15) - program prints statement indicating error and 
+   reprompts user.
    
-9. I tried to add a task that was in at an invalid time (i.e. hour greater than 24 and minute greater than 60) and my 
-   program printed a statement indicating my error and asked me to try again. 
+9. Adding task that at invalid time (i.e. hour greater than 24 and minute greater than 60) - 
+   program prints statement indicating  error and reprompts user.  
 
 ____________________________________________________________________________________________________________
 
@@ -166,7 +149,7 @@ and then update the event in the day's child vector so that it was a MergeDecora
 If you chose not to use the decorator pattern, how does your design compare with it when 
 considering flexibility and extensibility of the design? 
 
-I did use the decorator pattern! 
+I used the decorator design pattern. 
 
 
 
